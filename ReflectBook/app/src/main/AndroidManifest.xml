@@ -16,9 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Note"/>
-        <activity android:name=".profile"/>
-        <activity android:name=".register"/>
+        <activity android:name=".Note"> </activity>
+        <activity android:name=".profile"></activity>
+        <activity android:name=".Introduction"></activity>
+        <activity android:name=".Setting"></activity>
+        <activity android:name=".moodChoice"></activity>
+        <activity android:name=".security"></activity>
+        <activity android:name=".register"></activity>
     </application>
 
 </manifest>
