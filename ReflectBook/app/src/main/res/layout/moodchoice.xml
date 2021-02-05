@@ -8,14 +8,80 @@
 
     <TextView
         android:id="@+id/QuestionOne"
-        android:layout_width="246dp"
+        android:layout_width="0dp"
         android:layout_height="89dp"
+        android:gravity="center"
         android:text="TextView"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="0.314" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="313dp"
+        android:layout_height="112dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <RadioButton
+            android:id="@+id/radioButton_angry"
+            android:layout_width="112dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/angryeemoji"
+            android:button="@android:color/transparent"
+            android:padding="16dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_happy"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/happyemoji"
+            android:button="@android:color/transparent"
+            android:padding="16dp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="318dp"
+        android:layout_height="119dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708">
+
+        <RadioButton
+            android:id="@+id/radioButton_sad"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/sadeemoji"
+            android:button="@android:color/transparent"
+            android:padding="16dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_horrible"
+            android:layout_width="118dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/horribleemoji"
+            android:button="@android:color/transparent"
+            android:padding="16dp" />
+
+    </RadioGroup>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,11 @@ package com.example.reflectbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView background = findViewById(R.id.background_top);
+        background.setBackgroundColor(Color.parseColor("#ff9955"));
 
         Button begin = findViewById(R.id.Begin_button);
         begin.setOnClickListener(new View.OnClickListener() {

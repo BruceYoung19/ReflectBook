@@ -1,10 +1,13 @@
 package com.example.reflectbook;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,8 +18,9 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
 
+        TextView Background = findViewById(R.id.profileBackground);
+        Background.setBackgroundColor(Color.parseColor("#ff9955"));
 
-        // TODO: 30/01/21  Receive the information
         Bundle bundle = getIntent().getExtras();
 
         String f_name = bundle.getString("first_name");
@@ -63,7 +67,6 @@ public class profile extends AppCompatActivity {
     }
 
     public void get_Help(){
-        Intent intent = new Intent(this,Note.class);
-        startActivity(intent);
+
     }
 }

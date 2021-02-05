@@ -1,6 +1,7 @@
 package com.example.reflectbook;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,9 +27,11 @@ public class register extends AppCompatActivity {
 
         Button Complete_register = findViewById(R.id.register_complete_button);
 
-        hint.setText("Please summary the problem in one text");
+
         text_user.setText("Name");
         text_why.setText("Why are you using this?");
+        hint.setText("Please summarize in one word");
+
 
         first_name.getText();
         last_name.getText();
@@ -44,13 +47,9 @@ public class register extends AppCompatActivity {
                 intent_send.putExtra("purpose_of_use",purpose_of_use.getText().toString());
                 startActivity(intent_send);
 
-                //open_profile();
+
             }
         });
     }
 
-    public void open_profile(){
-        Intent intent = new Intent(this,profile.class);
-        startActivity(intent);
-    }
 }
