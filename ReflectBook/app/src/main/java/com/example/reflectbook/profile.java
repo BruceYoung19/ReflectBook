@@ -10,8 +10,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class profile extends AppCompatActivity {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,19 @@ public class profile extends AppCompatActivity {
         String Full_name = f_name + " " + l_name;
 
         name.setText(Full_name);
+
+        ArrayList <entry_item> entry_list = new ArrayList<>();
+        entry_list.add(new entry_item(R.drawable.angryeemoji, "Entry 54","2010"));
+        entry_list.add(new entry_item(R.drawable.happyemoji, "Entry 3","2010"));
+        entry_list.add(new entry_item(R.drawable.horribleemoji, "Entry 1","2010"));
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView_entry);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new entryAdapter(entry_list);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
 
         Button help = findViewById(R.id.help_button);
         help.setOnClickListener(new View.OnClickListener() {

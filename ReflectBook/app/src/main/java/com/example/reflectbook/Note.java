@@ -2,6 +2,7 @@ package com.example.reflectbook;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -55,7 +56,13 @@ public class Note extends AppCompatActivity {
         userInput.getText();
 
         // TODO: 3/02/21  button for finishing the entry
-        Button button;
+        Button button = findViewById(R.id.finishEntryButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 16/02/21  transfer data to profile class
+            }
+        });
 
         // TODO: 3/02/21 create xlsx store data to it
 
