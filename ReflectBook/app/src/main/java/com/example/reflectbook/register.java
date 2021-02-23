@@ -17,6 +17,7 @@ public class register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
+        TextView background_color = findViewById(R.id.registerBackground);
         TextView text_user = findViewById(R.id.Name_text);
         TextView text_why = findViewById(R.id.TextView_WhyUse);
         TextView hint = findViewById(R.id.textView_hint);
@@ -27,11 +28,10 @@ public class register extends AppCompatActivity {
 
         Button Complete_register = findViewById(R.id.register_complete_button);
 
-
+        background_color.setBackgroundColor(Color.parseColor("#ff9955"));
         text_user.setText("Name");
         text_why.setText("Why are you using this?");
         hint.setText("Please summarize in one word");
-
 
         first_name.getText();
         last_name.getText();

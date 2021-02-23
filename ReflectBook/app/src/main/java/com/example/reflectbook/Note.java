@@ -1,7 +1,9 @@
 package com.example.reflectbook;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,17 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Date;
 
 public class Note extends AppCompatActivity {
+    // TODO: 2/02/21  get Entry number
+    int counter = 0;
+    int entry_num = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note);
 
-        // TODO: 2/02/21  get Entry number 
-        int entry_num = 0;
-        Date date = new Date();
-
         // Changing the format of the date
+        Date date = new Date();
         String Store_date = date.toString();
         String output_date = Store_date.substring(0,10);
 
@@ -61,12 +63,26 @@ public class Note extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO: 16/02/21  transfer data to profile class
+                Intent intentsend = new Intent(Note.this,profile.class);
+                intentsend.putExtra("entry_num", Entry_num.getText());
+                intentsend.putExtra("Mood",mood_txt.getText() );
+                intentsend.putExtra("date", output_date );
+                startActivity(intentsend);
+
             }
         });
 
         // TODO: 3/02/21 create xlsx store data to it
 
     }
-    // TODO: 5/02/21  entry Number 
+    // TODO: 5/02/21  entry Number
+    public int EntryNumCount(int count){
+        counter++;
+        System.out.println(counter);
+        entry_num = counter++;
+        System.out.println(entry_num);
+        return count;
+    }
+
     
 }

@@ -21,6 +21,7 @@ public class profile extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,11 +84,14 @@ public class profile extends AppCompatActivity {
     }
 
     public void open_Setting(){
-        Intent intent = new Intent(this,security.class);
+        Intent intent = new Intent(this,Setting.class);
         startActivity(intent);
     }
 
     public void get_Help(){
 
     }
+
+    // TODO: 17/02/21  generate xlsx file here 
+    // TODO: 17/02/21  generate textfile here
 }
