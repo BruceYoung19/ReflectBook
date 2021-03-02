@@ -17,7 +17,5 @@ public class Setting extends AppCompatActivity {
         color_background.setBackgroundColor(Color.parseColor("#ff9955"));
 
 
-
-
     }
 }

@@ -7,17 +7,6 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/Begin_button"
-        android:layout_width="181dp"
-        android:layout_height="68dp"
-        android:text="Begin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
-
     <TextView
         android:id="@+id/background_top"
         android:layout_width="0dp"
